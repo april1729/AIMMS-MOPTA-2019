@@ -1,4 +1,4 @@
-function [z,x,y] = global_solver_milp(l,w,L,W, x0)
+function [z,x,y] = global_solver_milp(l,w,L,W)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -44,9 +44,7 @@ A(k, 1:n)=1*(l.*w);
 b(k)=L*W;
 
 % we need to take at least x items, elimates a ton of bad points
-k=get_constraint_number(A);
-A(k, 1:n)=-1;
-b(k)=-3;
+
 
 % if we arent using a particular object, dont worry about the placement
 % constraints for it 

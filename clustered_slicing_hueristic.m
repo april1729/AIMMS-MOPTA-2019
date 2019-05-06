@@ -1,5 +1,5 @@
 function [z,x,y, x0] = clustered_slicing_hueristic(w,h,W,H, cuts)
-
+% Implements 2 stage 1d knapsack problem method
 m=length(cuts)-1;
 n=length(w);
 
